@@ -1,0 +1,48 @@
+<section class="wrapper">
+  <div class="container">
+    <div class="content">
+      <h1 class="heading">山登録</h1>
+        <%= form_for @mountain do |f| %>
+        <table>
+          <tr>
+　  　　    <th><%= f.label :山の名前 %></th>
+            <td><%= f.text_field :name %></td>
+          </tr>
+          
+          <tr>
+            <th><%= f.label :季節 %></th>
+            <td><%= f.text_field :season %></td>
+          </tr>
+          
+          <tr>
+            <th><%= f.label :登り始めた時間 %></th>
+            <td><%= f.time_field :start %></td>
+          </tr>
+          
+          <tr>
+            <th><%= f.label :登り終えた時間 %></th>
+            <td><%= f.time_field :end %></td>
+          </tr>
+          
+          <tr>
+            <th><%= f.label :食べ物 %></th>
+            <td><%= f.number_field :food %>食分</td>
+          </tr>
+          
+          <tr>
+            <th><%= f.label :水分 %></th>
+            <td><%= f.number_field :water %>リットル</td>
+          </tr>
+          
+          <tr>
+            <th><%= f.label :山の写真 %></th>
+            <td><%= f.attachment_field :image %></td>
+          </tr>
+        
+            <p><%= f.submit "登録完了する", class:  "button is-success"%></p>
+
+          </table>
+          <% end %>
+        </div>
+    </div>
+</section>
