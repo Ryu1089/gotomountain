@@ -7,14 +7,14 @@
   <table>
     <thead>
       <tr align="center">
-        <th>ルーム画像</th>
-        <th>ルーム名</th>
+        <th>山の画像</th>
+        <th>山の名前</th>
       </tr>
     </thead>
     <tbody>
       <% @mountains.each do |mountain| %>
         <tr>
-          <td><%= attachment_image_tag mountain, :image,fallback: "no-image.png", size:'200x200' %></td>
+          <td><%= attachment_image_tag mountain, :image,fallback: "no-image.png"  %></td>
           <td class="posts-name"><%= link_to mountain.name, mountain_path(mountain) %></td>
         </tr>
     </tbody>

@@ -13,17 +13,14 @@ class MountainsController < ApplicationController
 
   def new
     @mountain = Mountain.new
+    
   end
   
   def create
     @mountain = Mountain.new(mountain_params)
     @mountain.user_id = current_user.id
-    if @mountain.save(validate: false)
-      redirect_to :mountains
-      flash[:notice] = "山を登録しました"
-    else
-      render"new"
-    end
+    @mountain.save
+    redirect_to :mountains
   end
   
   def destroy
