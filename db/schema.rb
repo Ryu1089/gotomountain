@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_22_111849) do
+ActiveRecord::Schema.define(version: 2022_04_24_144938) do
 
   create_table "mountains", force: :cascade do |t|
     t.integer "user_id"
     t.string "name"
-    t.date "season"
+    t.string "season"
     t.datetime "start"
     t.datetime "end"
     t.string "food"

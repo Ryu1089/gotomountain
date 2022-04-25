@@ -20,6 +20,7 @@
       <td><%= @mountain.end.to_s(:datetime_jp) %></td>
       <td><%= @mountain.food %>食分</td>
       <td><%= @mountain.water %>リットル</td>
+      <td><%= link_to"削除",@mountain,method: :delete,date: {confurm:"本当に削除しますか？"} %></td></td>
     </tr>
    </tbody> 
   </table>

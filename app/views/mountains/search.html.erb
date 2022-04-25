@@ -1,6 +1,4 @@
-<h1 class="title">
-  検索結果：<%= @moutains.count %>件
-</h1>
+
  
   
 
@@ -8,14 +6,14 @@
 <section class="section">
   <div class="container">
     <div class="columns is-multiline">
-      <% @mountains.each do |room| %>
+      <% @mountains.each do |mountain| %>
         <div class="column is-3">
           <div class="card">
             <div class="card-content">
               <div class="card-image">
                 <figure class="image">
-                  <%= link_to mountains_path(room) do %>
-                    <%= attachment_image_tag room, :image, fallback: "no-image.png" %>
+                  <%= link_to mountain_path(mountain) do %>
+                    <%= attachment_image_tag mountain, :image, fallback: "no-image.png" %>
                   <% end %>
                 </figure>
               </div>
@@ -23,16 +21,14 @@
             <div class="card-content">
               <div class="media">
                 <div class="media-content">
-                  <div class="title"><%=link_to mountain.name, mountains_path(room) %></div>
+                  <div class="title"><%=link_to mountain.name, mountains_path(mountain) %></div>
                 </div>
               </div>
               <div class="media">
                 <div class="media-content">
-                  <div class="title"><%=link_to mountain.season, mountains_path(room) %></div>
+                  <div class="title"><%=link_to mountain.season, mountains_path(mountain) %></div>
+          
                 </div>
-              </div>
-              <div class="content">
-                <%=link_to mountain.start, mountains_path(room) %>
               </div>
             </div>
           </div>

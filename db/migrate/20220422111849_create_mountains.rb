@@ -3,7 +3,7 @@ class CreateMountains < ActiveRecord::Migration[6.1]
     create_table :mountains do |t|
       t.integer :user_id
       t.string :name
-      t.date :season
+      t.string :season
       t.datetime :start
       t.datetime :end
       t.string :food
