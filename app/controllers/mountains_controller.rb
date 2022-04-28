@@ -1,5 +1,5 @@
 class MountainsController < ApplicationController
-   before_action :set_q, only: [:index, :search]
+  
     before_action :authenticate_user!
   
   def index
@@ -9,6 +9,7 @@ class MountainsController < ApplicationController
   def show
     @mountain = Mountain.find(params[:id])
     @user = User.find_by(id: current_user.id)
+    binding.pry
   end
 
   def new
@@ -19,8 +20,14 @@ class MountainsController < ApplicationController
   def create
     @mountain = Mountain.new(mountain_params)
     @mountain.user_id = current_user.id
+    if @mountain.invalid?
+      flash[:notice] = "項目を全部入力してください"
+      render "new"
+    else
     @mountain.save
-    redirect_to :mountains
+    flash[:notice] = "山を登録しました"
+    redirect_to @mountain
+    end
   end
   
   def destroy

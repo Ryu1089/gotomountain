@@ -3,7 +3,7 @@ class Mountain < ApplicationRecord
   attachment :image
   
   validates :name, presence: true
-  validates :body, presence: true
+  validates :season, presence: true
   validates :start, presence: true
   validates :end, presence: true
   validates :food, presence: true

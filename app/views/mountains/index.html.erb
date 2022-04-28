@@ -2,23 +2,38 @@
   <p class="notice"><%= flash[:notice] %></p>
 <% end %>
 
-<div class="container-fiuld room-posts">
-  <h4 class="pb-4">登った山一覧</h4>
-  <table>
-    <thead>
-      <tr align="center">
-        <th>山の画像</th>
-        <th>山の名前</th>
-      </tr>
-    </thead>
-    <tbody>
+<section class="section">
+  <div class="container">
+    <h1 class="title is-3">登録一覧</h1>
+    <div class="columns is-multiline">
       <% @mountains.each do |mountain| %>
-        <tr>
-          <td><%= attachment_image_tag mountain, :image,fallback: "no-image.png"  %></td>
-          <td class="posts-name"><%= link_to mountain.name, mountain_path(mountain) %></td>
-        </tr>
-    </tbody>
-    <% end %>
-  </table>
-</div>
+        <div class="column is-3">
+          <div class="card">
+            <div class="card-content">
+              <div class="card-image">
+                <figure class="image">
+                  <%= link_to mountain_path(mountain) do %>
+                    <%= attachment_image_tag mountain, :image, fallback: "no-image.png" %>
+                  <% end %>
+                </figure>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
+                  <div class="title"><%=link_to mountain.name, mountain_path(mountain) %></div>
+                </div>
+              </div>
+              <div class="media">
+                <div class="media-content">
+                  <div class="title"><%=link_to mountain.season, mountain_path(mountain) %></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
 
