@@ -5,4 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   attachment :profile_image
   has_many :mountains, dependent: :destroy
+  
+  validates :email, presence: true
+  validates :encrypted_password, presence: true
+  validates :username, presence: true
+
 end

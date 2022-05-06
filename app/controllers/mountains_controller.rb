@@ -9,7 +9,6 @@ class MountainsController < ApplicationController
   def show
     @mountain = Mountain.find(params[:id])
     @user = User.find_by(id: current_user.id)
-    binding.pry
   end
 
   def new
