@@ -1,24 +1,19 @@
-# README
+アプリ名
+　　GoToMountain
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+なぜ作ったのか
+ 自分が登りたい山、登った山の情報を共有するあぷりは需要があるかなと思ったから
 
-Things you may want to cover:
+demo画像
 
-* Ruby version
+使い方
+ メニュー⇨登った山登録⇨各項目を入力して登録
+ メニュー⇨登録済み山一覧⇨登録した山を見ることができる
+ メニュー⇨山の検索⇨各ユーザーが登録した山の確認ができる。
 
-* System dependencies
+ER図
+　　
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+機能一覧
+　　ログイン機能
+ 検索機能
