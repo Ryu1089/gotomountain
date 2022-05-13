@@ -63,3 +63,7 @@ gem "refile-mini_magick"
 gem "bulma-rails"
 gem 'ransack'
 gem 'pry-rails'
+
+group :production do
+  gem 'pg', '1.2.3'
+end
