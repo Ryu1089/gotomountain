@@ -33,26 +33,20 @@
               <label for="label1">メニュー</label>
                 <input type="checkbox" id="label1"/>
                   <ul class="hidden_show" >
-                    <li> <%= link_to "登った山登録", new_mountain_path %></li>
+                    <li><%= link_to "登った山登録", new_mountain_path %></li>
                     <li><%= link_to "登録済み山一覧", :mountains%></li>
                     <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "lbutton is-warning is-light" %></li>
                   </ul>
             </div>
             <% else %>
-            <div id="navbarExampleTransparentExample" class="navbar-menu">
-              <div class="navbar-end">
-                <div class="navbar-item">
-                  <div class="field is-grouped">
-                    <p class="control">
-                      <%= link_to "ログイン", new_user_session_path, class: "button is-warning is-light" %>
-                    </p>
-                    <p class="control">
-                      <%= link_to "新規登録", new_user_registration_path, class: "button is-warning is-light" %>
-                    </p>
-                  </div>
-                </div>
-             </div>
-           </div>
+            <div class="hidden_box">
+              <label for="label1">メニュー</label>
+                <input type="checkbox" id="label1"/>
+                  <ul class="hidden_show" >
+                    <li> <%= link_to "ログイン", new_user_session_path, class: "lbutton is-warning is-light" %></li>
+                    <li><%= link_to "新規登録", new_user_registration_path, class: "lbutton is-warning is-light" %></li>
+                  </ul>
+            </div>
            <% end %> 
         </div>
       </nav>
