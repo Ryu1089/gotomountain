@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Gotooyama</title>
+    <title>Gotomountain</title>
       <meta name="viewport" content="width=device-width,initial-scale=1">
         <%= csrf_meta_tags %>
         <%= csp_meta_tag %>
@@ -45,6 +45,7 @@
                   <ul class="hidden_show" >
                     <li> <%= link_to "ログイン", new_user_session_path, class: "lbutton is-warning is-light" %></li>
                     <li><%= link_to "新規登録", new_user_registration_path, class: "lbutton is-warning is-light" %></li>
+                    <li><%= link_to 'ゲストログイン（閲覧用）', home_guest_sign_in_path, method: :post %></li>
                   </ul>
             </div>
            <% end %> 
