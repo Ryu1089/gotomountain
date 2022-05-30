@@ -53,6 +53,6 @@ class MountainsController < ApplicationController
   end
   
   def mountain_params
-    params.require(:mountain).permit(:name, :season, :start, :end, :food, :water, :image)
+    params.require(:mountain).permit(:name, :season, :start, :endtime, :food, :water, :image)
   end
 end

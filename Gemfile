@@ -65,6 +65,10 @@ gem "bulma-rails"
 gem 'ransack'
 gem 'pry-rails'
 
+gem 'net-imap'
+gem 'net-pop'
+gem 'net-smtp'
+
 group :production do
   gem 'pg', '1.2.3'
 end
