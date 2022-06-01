@@ -12,7 +12,6 @@ class User < ApplicationRecord
   
   def self.guest 
     find_or_create_by(email: 'guest@example.com',
-                       username: 'ゲスト',
                        encrypted_password: 1234567,
                       ) do |user|
       user.password = SecureRandom.urlsafe_base64 #パスワードはランダム生成
