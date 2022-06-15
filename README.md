@@ -13,3 +13,7 @@
 # 機能一覧
 　　ログイン機能
  検索機能
+ 
+ 
+ # サンプル画像
+ ![gotomountain](https://github.com/Ryu1089/gotomountain/issues/1)
