@@ -1,6 +1,6 @@
 class Mountain < ApplicationRecord
   belongs_to :user
-  attachment :image
+  has_one_attached :image
   
   
   validates :name, presence: true

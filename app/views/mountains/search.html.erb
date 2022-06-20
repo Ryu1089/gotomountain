@@ -13,7 +13,7 @@
               <div class="card-image">
                 <figure class="image">
                   <%= link_to mountain_path(mountain) do %>
-                    <%= attachment_image_tag mountain, :image, fallback: "no-image.png" %>
+                    <%= image_tag mountain.image, fallback: "no-image.png" %>
                   <% end %>
                 </figure>
               </div>
