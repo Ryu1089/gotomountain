@@ -13,7 +13,7 @@
               <div class="card-image">
                 <figure class="image">
                   <%= link_to mountain_path(mountain) do %>
-                    <%= image_tag mountain.image, fallback: "no-image.png" %>
+                    <%= image_tag mountain.image if mountain.image.present? %>
                   <% end %>
                 </figure>
               </div>

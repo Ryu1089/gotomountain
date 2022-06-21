@@ -13,7 +13,7 @@
    </thead>
    <tbody>
     <tr>
-      <td><%= image_tag @mountain.image %></td>
+      <td><%= image_tag @mountain.image if @mountain.image.present? %></td>
       <td><%= @mountain.name %></td>
       <td><%= @mountain.season %></td>
       <td><%= @mountain.start.to_s(:datetime_jp) %></td>
