@@ -5,8 +5,7 @@
       <th>山の画像</th>
       <th>山の名前</th>
       <th>季節</th>
-      <th>登り始めた時間</th>
-      <th>登り終えた時間</th>
+      <th>頂上までの時間</th>
       <th>食べ物</th>
       <th>水分</th>
     </tr>
@@ -17,7 +16,6 @@
       <td><%= @mountain.name %></td>
       <td><%= @mountain.season %></td>
       <td><%= @mountain.start.to_s(:datetime_jp) %></td>
-      <td><%= @mountain.endtime.to_s(:datetime_jp) %></td>
       <td><%= @mountain.food %>食分</td>
       <td><%= @mountain.water %>リットル</td>
     </tr>
@@ -30,16 +28,3 @@
   <%= button_to 'いいね', mountain_likes_path(@mountain) %>
 <% end %>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
